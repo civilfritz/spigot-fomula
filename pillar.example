@@ -1,0 +1,4 @@
+minecraft:
+  server:
+    path: /srv/minecraft
+    name: vanilla
