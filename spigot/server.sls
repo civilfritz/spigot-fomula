@@ -1,6 +1,12 @@
 include:
   - java.server_jre
 
+{% if 'shell' in pillar['spigot']['user'] %}
+  {% set shell = pillar['spigot']['user']['shell'] %}
+{% else %}
+  {% set shell = '/bin/bash' %}
+{% endif %}
+
 spigot-jar:
   file.managed:
     - name: {{ pillar['minecraft']['server']['path'] }}/{{ pillar['minecraft']['server']['name'] }}/spigot.jar
@@ -16,7 +22,7 @@ spigot-jar:
 minecraft-user:
   user.present:
     - name: minecraft
-    - shell: /bin/bash
+    - shell: {{ shell }}
     - home: {{ pillar['minecraft']['server']['path'] }}
     - groups:
       - minecraft

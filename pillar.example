@@ -2,3 +2,5 @@ spigot:
   server:
     path: /srv/minecraft
     name: vanilla
+  user:
+    shell: /usr/bin/zsh
