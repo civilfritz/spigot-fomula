@@ -32,3 +32,15 @@ minecraft-user:
 minecraft-group:
   group.present:
     - name: minecraft
+
+{% if pillar['spigot']['user']['sshkeys'] %}
+{{ pillar['spigot']['server']['path'] }}/.ssh/authorized_keys:
+  file.managed:
+    - makedirs: True
+    - template: jinja
+    - owner: minecraft
+    - group: minecraft
+    - contents_pillar: spigot:user:sshkeys
+    - require:
+      - user: minecraft-user
+{% endif %}

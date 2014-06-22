@@ -4,3 +4,6 @@ spigot:
     name: vanilla
   user:
     shell: /usr/bin/zsh
+    sshkeys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKHEOLLbeXgaqRQT9NBAopVz366SdYc0KKX33vAnq+2R
+      - ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBADIBCvV4OQg0ewzs12boEEflfJ/Iq+6Gkh/ohjCBV966PhXB/Th/4H0RUaHzUMB1MNi7FCkMihaZK4XG3E+t8yf5gDonLpiQQ6SGSF6z0SNj13KQpa1dKwVqJnZ9iyK2O9OmgRIU5Y2oLneHefWHc5zojIzhuigAO8qkgF5EG105CnbWg==
