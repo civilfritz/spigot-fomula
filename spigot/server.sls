@@ -9,7 +9,7 @@ include:
 
 spigot-jar:
   file.managed:
-    - name: {{ pillar['minecraft']['server']['path'] }}/{{ pillar['minecraft']['server']['name'] }}/spigot.jar
+    - name: {{ pillar['spigot']['server']['path'] }}/{{ pillar['spigot']['server']['name'] }}/spigot.jar
     - source: http://ci.md-5.net/job/Spigot/lastSuccessfulBuild/artifact/Spigot-Server/target/spigot.jar
     - owner: minecraft
     - group: minecraft
@@ -23,7 +23,7 @@ minecraft-user:
   user.present:
     - name: minecraft
     - shell: {{ shell }}
-    - home: {{ pillar['minecraft']['server']['path'] }}
+    - home: {{ pillar['spigot']['server']['path'] }}
     - groups:
       - minecraft
     - require:
