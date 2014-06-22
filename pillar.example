@@ -1,4 +1,4 @@
-minecraft:
+spigot:
   server:
     path: /srv/minecraft
     name: vanilla
