@@ -27,7 +27,7 @@ minecraft-user:
     - groups:
       - minecraft
     - require:
-      - group: minecraft
+      - group: minecraft-group
 
 minecraft-group:
   group.present:
